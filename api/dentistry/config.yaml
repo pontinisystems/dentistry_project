@@ -1,0 +1,6 @@
+database:
+ username: "postgres"
+ password: "f03c2919"
+ host: da2020.cezpgar46hmj.us-east-2.rds.amazonaws.com
+ port: 5432
+ databaseName: dentistry_api

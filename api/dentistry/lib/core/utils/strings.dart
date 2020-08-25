@@ -1,0 +1,12 @@
+const maximumNumberOfDoctors ="A cliníca atingiu o número máximo de médicos.";
+const entityNotFound ="Entidade não encontrada.";
+const unexpectedFailure ="Falha inesperada.";
+const serverError ="Internal Server Error - 500";
+const successfulRegistration ="Registro realizado com sucesso.";
+const userSuccessfullyRegistered ="Usuário cadastrado com sucesso.";
+const doctorExist ="Usuário já existe.";
+const entidadeExist ="Entidade já existe.";
+const requiredFields ="campos obrigatórios";
+const pleaseFillInTheRequiredFields ="Preencha os campos obrigatórios";
+const authenticated="autenticado";
+const token="token";
