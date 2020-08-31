@@ -1,11 +1,10 @@
-import 'package:dentistry/core/controller/jwt_authentication_controller.dart';
 import 'package:dentistry/modules/appointment/presentation/controllers/statistic_controller.dart';
+import 'package:dentistry/modules/main/presentation/main_controller.dart';
 import 'package:dentistry/modules/user/presentation/controllers/check_login_and_password_controller.dart';
 import 'package:get_it/get_it.dart';
-import 'package:injectable/injectable.dart';
 
 import 'core/dependency_injection/dependency_injection_conf.dart';
-import 'model/model.dart';
+import 'core/presentation/jwt_authentication_controller.dart';
 import 'dentistry.dart';
 
 /// This type initializes an application.
@@ -42,6 +41,9 @@ class DentistryChannel extends ApplicationChannel {
     final router = Router();
     //UserRouter.configure(router, context);
 
+    router
+        .route('main')
+        .link(() => GetIt.instance.get<MainController>());
 
 
     router
@@ -58,6 +60,19 @@ class DentistryChannel extends ApplicationChannel {
     router
         .route('user/v1/login')
         .link(() => GetIt.instance.get<CheckLoginAndPasswordController>());
+
+    router
+        .route('user/v1/register')
+        .link(() => GetIt.instance.get<JWTAuthenticationController>())
+        .link(() => GetIt.instance.get<CheckLoginAndPasswordController>());
+
+
+
+
+
+
+
+
 
     return router;
   }

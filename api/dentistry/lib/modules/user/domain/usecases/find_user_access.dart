@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:dentistry/core/exception/exceptions.dart';
-import 'package:dentistry/core/utils/cryptography_util.dart';
 import 'package:dentistry/modules/user/domain/entities/user_acess.dart';
 import 'package:dentistry/modules/user/domain/errors/erros.dart';
 import 'package:dentistry/modules/user/domain/repositories/user_repository.dart';

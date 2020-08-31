@@ -13,7 +13,7 @@ class _UserAccessModel extends UserAccess {
 
 
   @Relate(#userAccess)
-  PersonModel people;
+  PersonModel person;
 
 
 }

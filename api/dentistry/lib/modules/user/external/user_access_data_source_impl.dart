@@ -33,7 +33,7 @@ class UserAccessDataSourceImpl implements UserAccessDataSource {
         ..where((userAccess) => userAccess.password).equalTo(password.trim());
       final user = await query.fetchOne();
       return user;
-    } catch (e, s) {
+    } catch (e) {
       throw DatabaseException('Ocorreu um erro ao recuperar o usuário');
     }
   }
@@ -48,5 +48,11 @@ class UserAccessDataSourceImpl implements UserAccessDataSource {
     } catch (e, s) {
       throw DatabaseException('Ocorreu um erro ao recuperar as informações do usuário');
     }
+  }
+
+  @override
+  Future<void> saveUser() {
+    // TODO: implement saveUser
+    throw UnimplementedError();
   }
 }

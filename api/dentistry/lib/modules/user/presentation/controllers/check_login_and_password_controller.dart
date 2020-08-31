@@ -30,8 +30,7 @@ class CheckLoginAndPasswordController extends ResourceController {
                 .toMap());
       }
       if(failure is EntityNotFound){
-      //TODO validar com quem manja de backend qual retorno deve ser realizado
-        return Response.forbidden();
+        return Response.unauthorized();
       }
 
       return Response.serverError(

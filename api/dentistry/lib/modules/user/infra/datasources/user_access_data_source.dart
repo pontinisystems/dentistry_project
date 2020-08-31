@@ -7,6 +7,7 @@ abstract class UserAccessDataSource{
   Future<UserAccessModel> recoverUserByLoginPassword(String login , String password);
   Future<UserAccessModel> findUserAccessById(int id);
   Future<PersonModel> getMyInfo();
+  Future<void>saveUser();
 
 }
 
